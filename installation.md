@@ -31,13 +31,12 @@ ALTER ROLE pdkuser SUPERUSER;
 CREATE EXTENSION postgis;
 ~~~~
 
-## Install Django
+## Install Django and connect it to database
 
 - Make sure database name, username, and password match the names and password used above.
-
 - Follow instructions on: https://www.digitalocean.com/community/tutorials/how-to-use-postgresql-with-your-django-application-on-ubuntu-14-04
 - I got an error similar to [post on stackoverflow](https://stackoverflow.com/questions/40582423/invalid-http-host-header) and fixed it by adding ALLOWED_HOSTS = ['0.0.0.0','localhost'] to settings.pu
-
+- To test it, use trick on [link](https://www.ssh.com/ssh/tunneling/example): ssh -L 0.0.0.0:8000:0.0.0.0:8000 username@myserver.nl
 
 Add to settings.py (see https://stackoverflow.com/questions/36760549/python-django-youre-using-the-staticfiles-app-without-having-set-the-static-ro):
 ~~~~
