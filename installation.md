@@ -31,6 +31,10 @@ ALTER ROLE pdkuser SUPERUSER;
 CREATE EXTENSION postgis;
 ~~~~
 
+## Install Django
+
+- Make sure database name, username, and password match the names and password used above.
+
 Add to settings.py (see https://stackoverflow.com/questions/36760549/python-django-youre-using-the-staticfiles-app-without-having-set-the-static-ro):
 ~~~~
 # All settings common to all environments
