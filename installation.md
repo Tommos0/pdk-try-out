@@ -4,7 +4,7 @@ https://passivedatakit.org/getting-started/django-server
 ## Install postgresql with django
 https://www.digitalocean.com/community/tutorials/how-to-use-postgresql-with-your-django-application-on-ubuntu-14-04
 
-## Enable GIS extension
+## Create database, database user, and postgis extension
 
 http://suite.opengeo.org/docs/latest/dataadmin/pgGettingStarted/firstconnect.html
 https://stackoverflow.com/questions/16527806/cannot-create-extension-without-superuser-role
