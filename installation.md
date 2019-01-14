@@ -4,6 +4,9 @@ https://passivedatakit.org/getting-started/django-server
 ## Install postgresql with django
 https://www.digitalocean.com/community/tutorials/how-to-use-postgresql-with-your-django-application-on-ubuntu-14-04
 
+- to use the virtualenvironment created in this part of the process do:
+'''source ~/myproject/myprojectenv/bin/activate'''
+
 
 ## Install postgis
 
@@ -40,8 +43,17 @@ CREATE EXTENSION postgis;
 
 # Install PDK
 - path/to/django on our Server is /myproject/myprojectenv/local/lib/python2.7/site-packages/django
-- The following command was not clear to me: '''source ../venv/bin/activate''' is this a virtual enviroment that comes with the repository code or does this refer to the virtual environment we already created as part of the django installation?
-- Also confusing is when to implement the changes as suggested below:
+- I am currently at
+~~~~
+Install PDK objects schema (command line):
+./manage.py migrate
+~~~~
+inside https://passivedatakit.org/getting-started/django-server.
+
+and get the error:
+'''ImportError: No module named passive_data_kit.apps'''
+
+
 ...
 
 
