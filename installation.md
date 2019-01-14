@@ -38,6 +38,13 @@ CREATE EXTENSION postgis;
 - I got an error similar to [post on stackoverflow](https://stackoverflow.com/questions/40582423/invalid-http-host-header) and fixed it by adding ALLOWED_HOSTS = ['0.0.0.0','localhost'] to settings.pu
 - To test it, use trick on [link](https://www.ssh.com/ssh/tunneling/example): ssh -L 0.0.0.0:8000:0.0.0.0:8000 username@myserver.nl
 
+# Install PDK
+- path/to/django on our Server is /myproject/myprojectenv/local/lib/python2.7/site-packages/django
+- The following command was not clear to me: '''source ../venv/bin/activate''' is this a virtual enviroment that comes with the repository code or does this refer to the virtual environment we already created as part of the django installation?
+- Also confusing is when to implement the changes as suggested below:
+...
+
+
 Add to settings.py (see https://stackoverflow.com/questions/36760549/python-django-youre-using-the-staticfiles-app-without-having-set-the-static-ro):
 ~~~~
 # All settings common to all environments
