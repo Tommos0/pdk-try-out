@@ -4,6 +4,13 @@ https://passivedatakit.org/getting-started/django-server
 ## Install postgresql with django
 https://www.digitalocean.com/community/tutorials/how-to-use-postgresql-with-your-django-application-on-ubuntu-14-04
 
+
+## Install postgis
+
+~~~~
+sudo apt-get install postgis
+~~~~
+
 ## Create database, database user, and postgis extension
 
 http://suite.opengeo.org/docs/latest/dataadmin/pgGettingStarted/firstconnect.html
