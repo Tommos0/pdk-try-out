@@ -43,20 +43,24 @@ CREATE EXTENSION postgis;
 
 # Install PDK
 - path/to/django on our Server is /myproject/myprojectenv/local/lib/python2.7/site-packages/django
-- I am currently at
+
+
+#### Current status:
+
+I have progressed to https://passivedatakit.org/getting-started/django-server at point:
 ~~~~
 Install PDK objects schema (command line):
 ./manage.py migrate
 ~~~~
-inside https://passivedatakit.org/getting-started/django-server.
-
 and get the error:
+
 '''ImportError: No module named passive_data_kit.apps'''
 
+When I am inside Python and do '''import django.passive_data_kit''' I do not get an error.
 
-...
 
 
+### Other notes:
 Add to settings.py (see https://stackoverflow.com/questions/36760549/python-django-youre-using-the-staticfiles-app-without-having-set-the-static-ro):
 ~~~~
 # All settings common to all environments
@@ -73,6 +77,5 @@ path('data/', include('passive_data_kit.urls')),
 When using Django 2.1.3, solve the following errors:
 1. "TypeError: __init__() missing 1 required positional argument: 'on_delete'" which I solved by editing the 'models.py' file and adding 'on_delete=models.CASCADE' as an argument to each 'models.ForeignKey' call. I guess this has something to do with my Django version (see https://stackoverflow.com/questions/44026548/getting-typeerror-init-missing-1-required-positional-argument-on-delete).
 2. "ImportError: cannot import name 'logout'" which I solved by editing the 'urls.py' file to read  "from django.contrib.auth import logout" (see https://stackoverflow.com/questions/50669185/python-from-django-contrib-auth-views-import-logout-importerror-cannot-import-n).
-
 
 Once installed, verify that the database is online ('service postgresql status') and otherwise turn it on ('service postgresql start'). Then run Django ('python manage.py runserver') and log into the admin page ('http://127.0.0.1:8000/admin/') with 'admin' and 'wachtwoord'.
