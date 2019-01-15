@@ -42,7 +42,7 @@ CREATE EXTENSION postgis;
 - To test it, use trick on [link](https://www.ssh.com/ssh/tunneling/example): ssh -L 0.0.0.0:8000:0.0.0.0:8000 username@myserver.nl
 
 # Install PDK
-- path/to/django on our Server is /myproject/myprojectenv/local/lib/python2.7/site-packages/django
+- path/to/django on our Server is ~/myproject/pdkenvpython3/lib/python3.6/site-packages/django
 
 
 #### Current status:
@@ -58,7 +58,7 @@ and get the error:
 
 When I am inside Python and do '''import django.passive_data_kit''' I do not get an error.
 
-
+See this issue for progress on resolving this: https://github.com/Filter-Bubble/pdk-try-out/issues/1
 
 ### Other notes:
 Add to settings.py (see https://stackoverflow.com/questions/36760549/python-django-youre-using-the-staticfiles-app-without-having-set-the-static-ro):
