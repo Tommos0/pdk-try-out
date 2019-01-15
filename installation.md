@@ -5,7 +5,7 @@ https://passivedatakit.org/getting-started/django-server
 https://www.digitalocean.com/community/tutorials/how-to-use-postgresql-with-your-django-application-on-ubuntu-14-04
 
 - to use the virtualenvironment created in this part of the process do:
-'''source ~/myproject/myprojectenv/bin/activate'''
+'''source ~/myproject/pdkenvpython3/bin/activate'''
 
 
 ## Install postgis
