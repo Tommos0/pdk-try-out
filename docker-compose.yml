@@ -1,0 +1,33 @@
+version: '3'
+
+volumes:
+  postgres_data_local: {}
+
+services:
+  django:
+    container_name: pdk-django
+    build:
+      context: .
+      dockerfile: ./Dockerfile
+    depends_on:
+      - postgres
+    ports:
+      - "8000:8000"
+    environment:
+      - POSTGRES_PASSWORD:mysecretpassword
+      - POSTGRES_USER=postgres
+      - POSTGRES_DATABASE=postgres
+      - POSTGRES_HOST=postgres
+    command: python manage.py runserver 0.0.0.0:8000
+
+  postgres:
+    image: mdillon/postgis:9.6
+    container_name: pdk-postgres
+    volumes:
+      - postgres_data_local:/var/lib/postgresql/data
+    environment:
+      - POSTGRES_PASSWORD:mysecretpassword
+      - POSTGRES_USER=postgres
+      - POSTGRES_DATABASE=postgres
+    ports:
+    - "5432:5432"
