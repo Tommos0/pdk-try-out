@@ -1,5 +1,5 @@
 # Dockerfile
-FROM python:3
+FROM python:2.7
 
 WORKDIR /app
 COPY . /app

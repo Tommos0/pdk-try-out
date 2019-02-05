@@ -5,6 +5,7 @@ repository for notes and scripts related to trying out the Passive Data Kit
 2.	Ga naar folder
 3.	sudo docker-compose up -d postgres
 4.	sudo docker-compose run django python manage.py migrate
-5.	sudo docker-compose run django python manage.py createsuperuser
-6.	sudo docker-compose up
+5.      sudo docker-compose run django python manage.py collectstatic
+6.	sudo docker-compose run django python manage.py createsuperuser
+7.	sudo docker-compose up
 
