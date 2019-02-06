@@ -4,18 +4,20 @@ volumes:
   postgres_data_local: {}
 
 services:
-  django:
-    container_name: pdk-django
-    build:
-      context: .
-      dockerfile: ./Dockerfile
-    depends_on:
-      - postgres
+  django-apache2:
+    build: .
+    container_name: django-apache2
+    ulimits: # I had to add this to avoid an error, but I don't know what it does. Check this later.
+      nproc: 65535
+      nofile:
+        soft: 20000
+        hard: 40000
     ports:
-      - "8132:8132"
+      - '8005:80'
+      - '3500:3500'
+      - '8006:81'
     env_file:
       - variables.env
-    command: python manage.py runserver 0.0.0.0:8132
 
   postgres:
     image: mdillon/postgis:9.6
