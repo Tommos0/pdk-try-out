@@ -12,7 +12,7 @@ services:
     depends_on:
       - postgres
     ports:
-      - "8000:8000"
+      - "8132:8132"
     environment:
       - POSTGRES_PASSWORD:mysecretpassword
       - POSTGRES_USER=postgres
