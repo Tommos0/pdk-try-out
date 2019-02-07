@@ -25,7 +25,7 @@ SECRET_KEY = 'ap-e=-d4@!6#jdlpaw-a6jzfpdc=#t)0=crswll&(#l8zvxwjz'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['localhost', 'bubble.labs.vu.nl']
 
 
 # Application definition
