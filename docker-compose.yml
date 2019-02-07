@@ -13,11 +13,8 @@ services:
       - postgres
     ports:
       - "8132:8132"
-    environment:
-      - POSTGRES_PASSWORD:mysecretpassword
-      - POSTGRES_USER=postgres
-      - POSTGRES_DATABASE=postgres
-      - POSTGRES_HOST=postgres
+    env_file:
+      - variables.env
     command: python manage.py runserver 0.0.0.0:8132
 
   postgres:
@@ -25,9 +22,7 @@ services:
     container_name: pdk-postgres
     volumes:
       - postgres_data_local:/var/lib/postgresql/data
-    environment:
-      - POSTGRES_PASSWORD:mysecretpassword
-      - POSTGRES_USER=postgres
-      - POSTGRES_DATABASE=postgres
+    env_file:
+      - variables.env
     ports:
     - "5432:5432"
